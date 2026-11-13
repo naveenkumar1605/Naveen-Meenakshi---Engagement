@@ -1,0 +1,117 @@
+@import "tailwindcss";
+
+@theme {
+  --color-lavender: #E6E0F2;
+  --color-lilac: #D8C9E8;
+  --color-dusty: #B8A5CE;
+  --color-royal: #8873A8;
+  --color-royal-text: #6D588C;
+  --color-plum: #493B59;
+  --color-plum-deep: #372B45;
+  --color-ivory: #FFFDF8;
+  --color-mist: #F5F1FA;
+  --color-gold: #D6BD91;
+  --color-gold-light: #EFE1C6;
+  --color-gold-deep: #B5955E;
+  --color-destructive: #B4232C;
+
+  --font-script: "Great Vibes", cursive;
+  --font-serif: "Cormorant Garamond", Georgia, serif;
+  --font-display: "Cinzel", Georgia, serif;
+  --font-sans: "Poppins", ui-sans-serif, system-ui, sans-serif;
+
+  --animate-spin-slow: spin 60s linear infinite;
+  --animate-float-slow: float-slow 9s ease-in-out infinite;
+  --animate-sway: sway 7s ease-in-out infinite;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-family: var(--font-sans);
+    background-color: #E6E0F2;
+    color: #493B59;
+  }
+
+  body {
+    overflow-x: hidden;
+    background-color: #E6E0F2;
+    color: #493B59;
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+.font-script {
+  font-family: "Great Vibes", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-synthesis: none;
+  font-kerning: normal;
+  font-feature-settings: "kern" 1, "liga" 1, "calt" 1;
+  word-spacing: 0.14em;
+}
+
+.font-serif {
+  font-family: "Cormorant Garamond", Georgia, serif;
+}
+
+.font-display {
+  font-family: "Cinzel", Georgia, serif;
+}
+
+.text-gold-gradient {
+  display: inline-block;
+  padding: 0.18em 0.34em;
+  margin: -0.18em -0.34em;
+  color: transparent;
+  background: linear-gradient(135deg, #EFE1C6 0%, #D6BD91 45%, #B5955E 70%, #EFE1C6 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.bg-gold-gradient {
+  background: linear-gradient(135deg, #EFE1C6 0%, #D6BD91 50%, #B5955E 100%);
+}
+
+@keyframes float-slow {
+  0%,
+  100% {
+    opacity: 0;
+    transform: translate(0, 0);
+  }
+  20%,
+  80% {
+    opacity: var(--particle-opacity, 0.8);
+  }
+  50% {
+    transform: translate(12px, -60px);
+  }
+}
+
+@keyframes sway {
+  0%,
+  100% {
+    transform: rotate(-2deg) translateY(0);
+  }
+  50% {
+    transform: rotate(2deg) translateY(-6px);
+  }
+}
+
+@keyframes eq {
+  0%,
+  100% {
+    height: 4px;
+  }
+  50% {
+    height: 16px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-spin-slow,
+  .animate-float-slow,
+  .animate-sway {
+    animation: none !important;
+  }
+}

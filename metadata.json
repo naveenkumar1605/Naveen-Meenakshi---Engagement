@@ -1,0 +1,8 @@
+{
+  "name": "Naveen & Meenakshi Engagement Invitation",
+  "description": "An interactive lavender-themed engagement ceremony invitation for Naveen Kumar M & Meenakshi B on 06 December 2026 at Meenakshi Natesan Mahal, Devakottai.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
